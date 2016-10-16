@@ -8,12 +8,7 @@ from spyne.server.wsgi import WsgiApplication
 from collections import defaultdict
 import requests
 from spyne import srpc
-#import urllib2
 
-"""
-req = urllib2.Request('https://api.spotcrime.com/crimes.json?lat=37.334164&lon=-121.884301&radius=0.02&key=.')
-response = urllib2.urlopen(req)
-r = response.read()"""
 
 class CrimeDetect(ServiceBase):
     @srpc(Unicode,Unicode,Unicode,_returns=Iterable(Unicode))
